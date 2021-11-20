@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="184" height="60" viewBox="0 0 184 60">
+  <defs>
+    <clipPath id="clip-taiwan-desktop-logo">
+      <rect width="184" height="60"/>
+    </clipPath>
+  </defs>
+  <g id="taiwan-desktop-logo" clip-path="url(#clip-taiwan-desktop-logo)">
+    <rect id="Rectangle_297" data-name="Rectangle 297" width="60" height="60" rx="20" fill="#ffd167"/>
+    <circle id="Ellipse_118" data-name="Ellipse 118" cx="3" cy="3" r="3" transform="translate(27 31)" fill="#fff"/>
+    <rect id="Rectangle_298" data-name="Rectangle 298" width="3" height="6" transform="translate(33 31) rotate(90)" fill="#fff"/>
+    <g id="Group_389" data-name="Group 389" transform="translate(-20 -18)">
+      <circle id="Ellipse_25" data-name="Ellipse 25" cx="3" cy="3" r="3" transform="translate(36 41)" fill="#fff"/>
+      <circle id="Ellipse_26" data-name="Ellipse 26" cx="3" cy="3" r="3" transform="translate(58 41)" fill="#fff"/>
+      <rect id="Rectangle_88" data-name="Rectangle 88" width="22" height="6" transform="translate(39 41)" fill="#fff"/>
+    </g>
+    <circle id="Ellipse_119" data-name="Ellipse 119" cx="3" cy="3" r="3" transform="translate(96 23)" fill="#fff"/>
+    <circle id="Ellipse_120" data-name="Ellipse 120" cx="3" cy="3" r="3" transform="translate(96 31)" fill="#fff"/>
+    <circle id="Ellipse_121" data-name="Ellipse 121" cx="3" cy="3" r="3" transform="translate(77 23)" fill="#fff"/>
+    <circle id="Ellipse_122" data-name="Ellipse 122" cx="3" cy="3" r="3" transform="translate(72 31)" fill="#fff"/>
+    <circle id="Ellipse_123" data-name="Ellipse 123" cx="3" cy="3" r="3" transform="translate(82 31)" fill="#fff"/>
+    <circle id="Ellipse_124" data-name="Ellipse 124" cx="3" cy="3" r="3" transform="translate(149 23)" fill="#fff"/>
+    <circle id="Ellipse_125" data-name="Ellipse 125" cx="3" cy="3" r="3" transform="translate(144 31)" fill="#fff"/>
+    <circle id="Ellipse_126" data-name="Ellipse 126" cx="3" cy="3" r="3" transform="translate(154 31)" fill="#fff"/>
+    <circle id="Ellipse_127" data-name="Ellipse 127" cx="3" cy="3" r="3" transform="translate(168 31)" fill="#fff"/>
+    <circle id="Ellipse_128" data-name="Ellipse 128" cx="3" cy="3" r="3" transform="translate(168 23)" fill="#fff"/>
+    <circle id="Ellipse_134" data-name="Ellipse 134" cx="3" cy="3" r="3" transform="translate(178 23)" fill="#fff"/>
+    <circle id="Ellipse_135" data-name="Ellipse 135" cx="3" cy="3" r="3" transform="translate(178 31)" fill="#fff"/>
+    <circle id="Ellipse_129" data-name="Ellipse 129" cx="3" cy="3" r="3" transform="translate(120 23)" fill="#fff"/>
+    <circle id="Ellipse_130" data-name="Ellipse 130" cx="3" cy="3" r="3" transform="translate(130 23)" fill="#fff"/>
+    <circle id="Ellipse_131" data-name="Ellipse 131" cx="3" cy="3" r="3" transform="translate(110 23)" fill="#fff"/>
+    <circle id="Ellipse_132" data-name="Ellipse 132" cx="3" cy="3" r="3" transform="translate(115 31)" fill="#fff"/>
+    <circle id="Ellipse_133" data-name="Ellipse 133" cx="3" cy="3" r="3" transform="translate(125 31)" fill="#fff"/>
+  </g>
+</svg>

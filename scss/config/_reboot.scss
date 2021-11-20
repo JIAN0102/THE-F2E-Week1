@@ -1,0 +1,30 @@
+body{
+  font-family: 'Roboto','Noto Sans TC', sans-serif;
+  overflow-x: hidden;
+  background-color: $gray-400;
+}
+
+input:focus,button:focus,textarea:focus,select:focus{
+  outline: none;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+p {
+  line-height: 1.75;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

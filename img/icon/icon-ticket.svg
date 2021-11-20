@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_100" data-name="Rectangle 100" width="24" height="24" transform="translate(899 921)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-icon-ticket">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="icon-ticket" clip-path="url(#clip-icon-ticket)">
+    <g id="Mask_Group_26" data-name="Mask Group 26" transform="translate(-899 -921)" clip-path="url(#clip-path)">
+      <path id="ticket-alt-solid" d="M5.333,68H18.667v8H5.333ZM22,72a2,2,0,0,0,2,2v4a2,2,0,0,1-2,2H2a2,2,0,0,1-2-2V74a2,2,0,0,0,0-4V66a2,2,0,0,1,2-2H22a2,2,0,0,1,2,2v4A2,2,0,0,0,22,72Zm-2-4.333a1,1,0,0,0-1-1H5a1,1,0,0,0-1,1v8.667a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1Z" transform="translate(899 861)" fill="#ffd167"/>
+    </g>
+  </g>
+</svg>

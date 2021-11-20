@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-icon-remind">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="icon-remind" clip-path="url(#clip-icon-remind)">
+    <path id="Subtraction_1" data-name="Subtraction 1" d="M12,24A12,12,0,0,1,3.515,3.515,12,12,0,1,1,20.485,20.485,11.922,11.922,0,0,1,12,24Zm-1.5-7.5v3h3v-3Zm0-12v10h3V4.5Z" fill="#ffd167"/>
+  </g>
+</svg>

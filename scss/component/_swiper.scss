@@ -1,0 +1,17 @@
+.swiper-pagination-bullet {
+  background: $gray-100;
+}
+
+.swiper-pagination-bullet-active {
+  background: $primary;
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 0 !important;
+}
+
+.swiper-slide {
+  height: auto;
+}
+

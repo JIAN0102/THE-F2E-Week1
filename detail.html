@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taiwan NO.1 Tour</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="dist/tailwind.css">
+  <link rel="stylesheet" href="dist/css/all.min.css">
+</head>
+
+<body>
+
+  <div id="app">
+    <header
+      class="fixed top-0 left-0 flex justify-between items-center w-full h-24 bg-gray-400 shadow-header z-50 px-5">
+      <a href="index.html">
+        <picture>
+          <source srcset="img/logo/taiwan-desktop-logo.svg" media="(min-width: 768px)">
+          <img src="img/logo/taiwan-mobile-logo.svg" alt="logo" />
+        </picture>
+      </a>
+      <a href="javascript:;"
+        class="relative flex items-center bg-gray-300 rounded-md duration-300 px-7.5 py-4 | hover:bg-gray-500">
+        <div class="text-gray-100">
+          <svg width="16" height="16" viewBox="0 0 16 16" class="fill-current">
+            <g transform="translate(-1308 -35)">
+              <path
+                d="M108.7,397.552a4.079,4.079,0,0,0-1.45-.915,4.352,4.352,0,0,0-1.75-.337,3.759,3.759,0,0,0-1.75.433,4.446,4.446,0,0,0-1.45,1.107c-.1.144-.2.241-.3.385a2.68,2.68,0,0,0-.3-.385,5.428,5.428,0,0,0-1.45-1.107,4.456,4.456,0,0,0-1.75-.433,5.368,5.368,0,0,0-1.75.337,5.616,5.616,0,0,0-1.45.915,4.37,4.37,0,0,0-1.3,3.081,4.84,4.84,0,0,0,.35,1.685,5.37,5.37,0,0,0,.95,1.4c.4.385,6.15,5.393,6.7,5.585.55-.241,6.25-5.2,6.7-5.585a4.371,4.371,0,0,0,1.3-3.082,4.841,4.841,0,0,0-.35-1.685A4.669,4.669,0,0,0,108.7,397.552Z"
+                transform="translate(1214 -359.8)" />
+            </g>
+          </svg>
+        </div>
+        <span class="text-sm text-white ml-2">我的最愛</span>
+        <span
+          class="absolute -top-1.5 -right-1.5 flex justify-center items-center text-xs bg-primary w-4 h-4 rounded-full">{{
+          collectData.length }}</span>
+      </a>
+
+    </header>
+
+    <main class="mt-24">
+
+      <section class="p-5">
+        <ul class="flex flex-wrap -ml-5 -mb-5">
+          <li class="w-1/2 pl-5 pb-5 | md:w-1/4">
+            <a href="javascript:;"
+              class="group duration-300 flex justify-center items-center bg-gray-500 rounded-md py-4 | hover:bg-gray-500">
+              <div class="relative w-8 h-8 | md:w-10 md:h-10">
+                <img src="img/icon/icon-attractions-gray.svg" alt="attractions-icon"
+                  class="duration-300 absolute top-0 left-0 w-full h-full opacity-0 | group-hover:opacity-0">
+                <img src="img/icon/icon-attractions-primary.svg" alt="attractions-icon"
+                  class="duration-300 absolute top-0 left-0 w-full h-full opacity-100 | group-hover:opacity-100">
+              </div>
+              <span class="duration-300 text-sm text-white ml-2.5 | md:text-base | group-hover:text-white">旅遊景點</span>
+            </a>
+          </li>
+          <li class="w-1/2 pl-5 pb-5 | md:w-1/4">
+            <a href="javascript:;"
+              class="group duration-300 flex justify-center items-center bg-gray-300 rounded-md py-4 | hover:bg-gray-500">
+              <div class="relative w-8 h-8 | md:w-10 md:h-10">
+                <img src="img/icon/icon-hostel-gray.svg" alt="hostel-icon"
+                  class="duration-300 absolute top-0 left-0 w-full h-full opacity-100 | group-hover:opacity-0">
+                <img src="img/icon/icon-hostel-primary.svg" alt="hostel-icon"
+                  class="duration-300 absolute top-0 left-0 w-full h-full opacity-0 | group-hover:opacity-100">
+              </div>
+              <span
+                class="duration-300 text-sm text-gray-100 ml-2.5 | md:text-base | group-hover:text-white">推薦旅宿</span>
+            </a>
+          </li>
+          <li class="w-1/2 pl-5 pb-5 | md:w-1/4">
+            <a href="javascript:;"
+              class="group duration-300 flex justify-center items-center bg-gray-300 rounded-md py-4 | hover:bg-gray-500">
+              <div class="relative w-8 h-8 | md:w-10 md:h-10">
+                <img src="img/icon/icon-food-gray.svg" alt="food-icon"
+                  class="duration-300 absolute top-0 left-0 w-full h-full opacity-100 | group-hover:opacity-0">
+                <img src="img/icon/icon-food-primary.svg" alt="food-icon"
+                  class="duration-300 absolute top-0 left-0 w-full h-full opacity-0 | group-hover:opacity-100">
+              </div>
+              <span
+                class="duration-300 text-sm text-gray-100 ml-2.5 | md:text-base | group-hover:text-white">美食饗宴</span>
+            </a>
+          </li>
+          <li class="w-1/2 pl-5 pb-5 | md:w-1/4">
+            <a href="javascript:;"
+              class="group duration-300 flex justify-center items-center bg-gray-300 rounded-md py-4 | hover:bg-gray-500">
+              <div class="relative w-8 h-8 | md:w-10 md:h-10">
+                <img src="img/icon/icon-event-gray.svg" alt="event-icon"
+                  class="duration-300 absolute top-0 left-0 w-full h-full opacity-100 | group-hover:opacity-0">
+                <img src="img/icon/icon-event-primary.svg" alt="event-icon"
+                  class="duration-300 absolute top-0 left-0 w-full h-full opacity-0 | group-hover:opacity-100">
+              </div>
+              <span
+                class="duration-300 text-sm text-gray-100 ml-2.5 | md:text-base | group-hover:text-white">活動資訊</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="px-5">
+        <div class="relative">
+          <picture>
+            <source srcset="img/banner/banner-desktop.svg" media="(min-width: 992px)">
+            <source srcset="img/banner/banner-pad.svg" media="(min-width: 768px)">
+            <img src="img/banner/banner-mobile.svg" alt="banner圖片" class="w-full">
+          </picture>
+          <div
+            class="w-full absolute top-10 left-1/2 transform -translate-x-1/2 px-8 | md:w-1/2 md:top-15 | lg:top-1/2 lg:-translate-y-1/2">
+            <h1 class="font-medium text-xl text-white text-center mb-5 | lg:text-2xl">
+              <span class="text-primary">探索</span>
+              您想去的地方
+            </h1>
+            <div class="flex flex-wrap -ml-5 -mb-5">
+              <div class="w-full pl-5 pb-5 | lg:w-1/2">
+                <div class="relative">
+                  <input type="text" class="w-full rounded-md px-4 py-3" placeholder="搜尋關鍵字">
+                  <a href="javascript:;" class="absolute top-1/2 right-2 transform -translate-y-1/2">
+                    <div
+                      class="flex justify-center items-center bg-gradient-135deg from-primary to-secondary w-8 h-8 rounded-lg">
+                      <img src="img/icon/icon-search.svg" alt="search-icon">
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="w-full pl-5 pb-5 | lg:w-1/2">
+                <div class="relative">
+                  <select class="w-full rounded-md px-4 py-3" v-model="nowCity" @change="changeCityData">
+                    <option :value="item.nameEn" v-for="item in cities" :key="item.name"> {{item.name}} </option>
+                  </select>
+                  <img src="img/icon/icon-down-arrow-gray.svg" alt="arrow-icon"
+                    class="absolute top-1/2 right-4 transform -translate-y-1/2 pointer-events-none">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-5 pt-5 pb-15" v-if="data !== null">
+        <div class="flex items-center mb-5">
+          <a href="index.html" class="mr-5">
+            <img src="img/icon/icon-left-arrow-white.svg" alt="arrow-icon">
+          </a>
+          <h3 class="text-md text-white">目前位置：旅遊景點</h3>
+          <img src="img/icon/icon-left-triangle-white.svg" alt="triangle-icon" class="mx-3">
+          <h3 class="text-md text-primary">{{ data.Name }}</h3>
+        </div>
+        <div class="flex flex-wrap -ml-5 -mb-7.5">
+          <div class="relative w-full pl-5 pb-7.5 lg:w-1/2">
+            <div class="landscape swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="image in imageListData">
+                  <img :src="image.url" alt="風景圖" class="w-full rounded-10">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="w-full pl-5 pb-7.5 | lg:w-1/2">
+            <div class="flex mb-5">
+              <div class="bg-white w-1 rounded-r mr-4"></div>
+              <h2 class="text-lg text-white | lg:text-xl">{{ data.Name }}</h2>
+            </div>
+            <p class="font-light text-gray-100 mb-7.5">{{ data.DescriptionDetail }}</p>
+            <div class="bg-gray-300 rounded-md">
+              <div class="px-4 py-6">
+                <ul class="flex flex-wrap -ml-5 -mb-5">
+                  <li class="w-full pl-5 pb-5 | md:w-1/2">
+                    <div class="flex items-start">
+                      <img src="img/icon/icon-location.svg" alt="location-icon">
+                      <span class="font-light text-white ml-2">{{ data.Address }}</span>
+                    </div>
+                  </li>
+                  <li class="w-full pl-5 pb-5 | md:w-1/2">
+                    <div class="flex items-start">
+                      <img src="img/icon/icon-time.svg" alt="time-icon">
+                      <span class="font-light text-white ml-2">{{ data.OpenTime }}</span>
+                    </div>
+                  </li>
+                  <li class="w-full pl-5 pb-5 | md:w-1/2">
+                    <div class="flex items-start">
+                      <img src="img/icon/icon-ticket.svg" alt="ticket-icon">
+                      <span class="font-light text-white ml-2">{{ data.TicketInfo }}</span>
+                    </div>
+                  </li>
+                  <li class="w-full pl-5 pb-5 | md:w-1/2">
+                    <div class="flex items-start">
+                      <img src="img/icon/icon-phone.svg" alt="phone-icon">
+                      <span class="font-light text-white ml-2">{{ data.Phone }}</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="px-4 py-6" v-if="data.Remarks">
+                <div class="flex items-start border-b border-white border-opacity-20">
+                  <img src="img/icon/icon-remind.svg" alt="remind-icon">
+                  <p class="font-light text-primary ml-2.5">{{ data.Remarks }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-5 py-15 border-t border-white border-opacity-20" v-if="data !== null">
+        <div class="flex flex-wrap flex-row-reverse -ml-5 -mb-7.5">
+          <div class="w-full pl-5 pb-7.5 | lg:w-1/2">
+            <div class="relative pt-56.25%">
+              <iframe width="100%" height="300" frameborder="0"
+                :src=`https://www.google.com/maps?q=${data.Name}&z=15&output=embed`
+                class="absolute top-0 left-0 w-full h-full rounded-10" v-if="data !== null">
+              </iframe>
+            </div>
+          </div>
+          <div class="w-full pl-5 pb-7.5 | lg:w-1/2">
+            <div class="flex mb-5 | lg:flex-row-reverse">
+              <div class="bg-white w-1 rounded-r mr-4 | lg:rounded-none lg:rounded-l lg:mr-0 lg:ml-4"></div>
+              <h2 class="text-lg text-white | lg:text-xl">交通方式</h2>
+            </div>
+            <p class="font-light text-gray-100 | lg:text-right">{{ data.TravelInfo }}</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-5 py-15 border-t border-white border-opacity-20">
+        <div class="flex mb-5">
+          <div class="bg-white w-1 rounded-r mr-4"></div>
+          <h2 class="text-lg text-white | lg:text-xl">更多旅遊景點</h2>
+        </div>
+        <div class="card swiper">
+          <div class="swiper-wrapper">
+            <card v-for="item in randomMoreAttactionsData" :key="item.Name" :item="item"></card>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="bg-gray-500 py-10">
+      <ul class="flex justify-center mb-3">
+        <li>
+          <a href="javascript:;" class="block transform duration-300 | hover:scale-110">
+            <img src="img/icon/icon-facebook.svg" alt="facebook-icon">
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="block transform duration-300 mx-5 | hover:scale-110">
+            <img src="img/icon/icon-line.svg" alt="line-icon">
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="block transform duration-300 | hover:scale-110">
+            <img src="img/icon/icon-instagram.svg" alt="instagram-icon">
+          </a>
+        </li>
+      </ul>
+      <p class="text-gray-100 text-center">Taiwan NO.1 Travel</p>
+    </footer>
+  </div>
+
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
+
+  <script type="module">
+    import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.1.4/vue.esm-browser.min.js';
+    const card = {
+      template: `
+      <div class="swiper-slide">
+        <a :href="cardLink"
+          class="group relative block bg-gray-300 h-full rounded-10 overflow-hidden">
+          <div class="absolute top-4 right-4 bg-white w-10 h-10 rounded-full z-10">
+            <div class="flex justify-center items-center h-full text-gray-100">
+              <svg width="16" height="16" viewBox="0 0 16 16" class="fill-current">
+                <g transform="translate(-1308 -35)">
+                  <path
+                    d="M108.7,397.552a4.079,4.079,0,0,0-1.45-.915,4.352,4.352,0,0,0-1.75-.337,3.759,3.759,0,0,0-1.75.433,4.446,4.446,0,0,0-1.45,1.107c-.1.144-.2.241-.3.385a2.68,2.68,0,0,0-.3-.385,5.428,5.428,0,0,0-1.45-1.107,4.456,4.456,0,0,0-1.75-.433,5.368,5.368,0,0,0-1.75.337,5.616,5.616,0,0,0-1.45.915,4.37,4.37,0,0,0-1.3,3.081,4.84,4.84,0,0,0,.35,1.685,5.37,5.37,0,0,0,.95,1.4c.4.385,6.15,5.393,6.7,5.585.55-.241,6.25-5.2,6.7-5.585a4.371,4.371,0,0,0,1.3-3.082,4.841,4.841,0,0,0-.35-1.685A4.669,4.669,0,0,0,108.7,397.552Z"
+                    transform="translate(1214 -359.8)" />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="bg-gray-500 h-50 overflow-hidden">
+            <img :src="item.Picture.PictureUrl1" alt="風景圖"
+              class="duration-300 w-full h-full object-cover transform | group-hover:scale-110"
+              v-if="item.Picture.PictureUrl1">
+          </div>
+          <div class="p-6">
+            <h3 class="text-md text-white mb-3">{{ item.Name }}</h3>
+            <p class="line-clamp-3 font-light text-gray-100 mb-6" v-if="item.Description"> {{ item.Description }}
+            </p>
+            <ul class="flex flex-wrap -ml-7.5 -mb-3">
+              <li class="flex items-start pl-7.5 pb-3">
+                <img src="img/icon/icon-location.svg" alt="location-icon">
+                <span class="font-light text-white ml-2.5">{{ item.Address.length > 3 ? item.Address.substring(0,3) : item.Address }}</span>
+              </li>
+              <li class="flex items-start pl-7.5 pb-3">
+                <img src="img/icon/icon-time.svg" alt="time-icon">
+                <span class="font-light text-white ml-2.5">{{ item.OpenTime }}</span>
+              </li>
+            </ul>
+          </div>
+        </a>
+      </div>`,
+      props: {
+        item: {
+          type: Object,
+          required: true,
+        }
+      },
+      data() {
+        return {
+
+        }
+      },
+      computed: {
+        cardLink() {
+          return `detail.html?name=${this.item.Name}`
+        }
+      }
+    };
+
+    createApp({
+      components: {
+        card,
+      },
+      data() {
+        return {
+          data: null,
+          moreAttactionsData: [],
+          imageListData: [],
+          randomMoreAttactionsData: [],
+          collectData: [],
+          nowName: '',
+          nowCity: '',
+          cities: [
+            {
+              name: '臺北市',
+              nameEn: 'Taipei',
+            },
+            {
+              name: '新北市',
+              nameEn: 'NewTaipei',
+            },
+            {
+              name: '桃園市',
+              nameEn: 'Taoyuan',
+            },
+            {
+              name: '臺中市',
+              nameEn: 'Taichung',
+            },
+            {
+              name: '臺南市',
+              nameEn: 'Tainan',
+            },
+            {
+              name: '高雄市',
+              nameEn: 'Kaohsiung',
+            },
+            {
+              name: '基隆市',
+              nameEn: 'Keelung',
+            },
+            {
+              name: '新竹市',
+              nameEn: 'Hsinchu',
+            },
+            {
+              name: '新竹縣',
+              nameEn: 'HsinchuCounty',
+            },
+            {
+              name: '苗栗縣',
+              nameEn: 'MiaoliCounty',
+            },
+            {
+              name: '彰化縣',
+              nameEn: 'ChanghuaCounty',
+            },
+            {
+              name: '南投縣',
+              nameEn: 'NantouCounty',
+            },
+            {
+              name: '雲林縣',
+              nameEn: 'YunlinCounty',
+            },
+            {
+              name: '嘉義縣',
+              nameEn: 'ChiayiCounty',
+            },
+            {
+              name: '嘉義市',
+              nameEn: 'Chiayi',
+            },
+            {
+              name: '屏東縣',
+              nameEn: 'PingtungCounty',
+            },
+            {
+              name: '宜蘭縣',
+              nameEn: 'YilanCounty',
+            },
+            {
+              name: '花蓮縣',
+              nameEn: 'HualienCounty',
+            },
+            {
+              name: '臺東縣',
+              nameEn: 'TaitungCounty',
+            },
+            {
+              name: '金門縣',
+              nameEn: 'KinmenCounty',
+            },
+            {
+              name: '澎湖縣',
+              nameEn: 'PenghuCounty',
+            },
+            {
+              name: '連江縣',
+              nameEn: 'LienchiangCounty',
+            },
+          ],
+        };
+      },
+      methods: {
+        getAuthorizationHeader() {
+          //  填入自己 ID、KEY 開始
+          const appId = '32327b82bd1845d6a0a6db5df546a225';
+          const appKey = '3SJ4izVJkK0kTiIfvxkfXUecvSY';
+          //  填入自己 ID、KEY 結束
+          let GMTString = new Date().toGMTString();
+          let ShaObj = new jsSHA('SHA-1', 'TEXT');
+          ShaObj.setHMACKey(appKey, 'TEXT');
+          ShaObj.update('x-date: ' + GMTString);
+          let HMAC = ShaObj.getHMAC('B64');
+          let Authorization = 'hmac username=\"' + appId + '\", algorithm=\"hmac-sha1\", headers=\"x-date\", signature=\"' + HMAC + '\"';
+          return { 'Authorization': Authorization, 'X-Date': GMTString };
+        },
+        getData() {
+          const url = `https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/?$filter=Name%20eq%20'${this.nowName}'&$format=JSON`;
+          axios.get(url, {
+            headers: this.getAuthorizationHeader()
+          })
+            .then((res) => {
+              this.data = res.data[0];
+              this.imageListData = this.formatImageList(this.data.Picture);
+              this.$nextTick(() => {
+                this.landscapeSwiper();
+              })
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        },
+        getMoreCard() {
+          const url = `https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/${this.nowCity}?$top=50&$format=JSON`;
+          axios.get(url, {
+            headers: this.getAuthorizationHeader()
+          }).then((res) => {
+            this.moreAttactionsData = res.data;
+            this.$nextTick(() => {
+              this.cardSwiper();
+            })
+            this.getMoreLandscape(6);
+          })
+            .catch(function (error) {
+              console.log(error);
+            });
+        },
+        cardSwiper() {
+          new Swiper('.card', {
+            spaceBetween: 20,
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false
+            },
+            pagination: {
+              el: '.card .swiper-pagination',
+              type: 'bullets',
+              clickable: true
+            },
+            breakpoints: {
+              768: {
+                slidesPerView: 2,
+              },
+              992: {
+                slidesPerView: 3,
+              },
+              1200: {
+                slidesPerView: 4,
+              }
+            }
+          });
+        },
+        landscapeSwiper() {
+          new Swiper('.landscape', {
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false
+            },
+            autoHeight: true,
+            pagination: {
+              el: '.landscape .swiper-pagination',
+              type: 'bullets',
+              clickable: true
+            },
+          });
+        },
+        formatImageList(item) {
+          let imageList = [];
+          for (const key in item) {
+            if (key.indexOf('PictureDescription') != -1) {
+              let keyIndex = key.split("PictureDescription")[1] - 1;
+              if (imageList[keyIndex] === undefined) {
+                imageList.splice(keyIndex, 0, {
+                  alt: item[key]
+                });
+              } else {
+                imageList[keyIndex]["alt"] = item[key]
+              }
+            } else {
+              let keyIndex = key.split("PictureUrl")[1] - 1;
+              if (imageList[keyIndex] === undefined) {
+                imageList.splice(keyIndex, 0, {
+                  url: item[key]
+                });
+              } else {
+                imageList[keyIndex]["url"] = item[key]
+              }
+            }
+          }
+          return imageList;
+        },
+        getMoreLandscape(count) {
+          this.randomMoreAttactionsData = [];
+          for (let i = 0; i < count; i++) {
+            let index = Math.floor(Math.random() * this.moreAttactionsData.length);
+            this.randomMoreAttactionsData.push(this.moreAttactionsData[index]);
+          }
+          this.$nextTick(() => {
+            this.cardSwiper();
+          });
+        },
+        changeCityData() {
+          this.getMoreCard();
+        },
+      },
+      created() {
+        const urlParams = new URLSearchParams(window.location.search);
+        this.nowName = urlParams.get('name');
+        this.nowCity = urlParams.get('nowCity');
+        this.getData();
+        this.getMoreCard();
+        let collectList = localStorage.getItem('collectList');
+        if (collectList) {
+          this.collectData = JSON.parse(collectList);
+        }
+      },
+    }).mount('#app');
+  </script>
+
+</body>
+
+</html>

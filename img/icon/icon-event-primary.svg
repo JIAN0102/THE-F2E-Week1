@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_178" data-name="Rectangle 178" width="40" height="40" transform="translate(1195 131)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-icon-event-primary">
+      <rect width="40" height="40"/>
+    </clipPath>
+  </defs>
+  <g id="icon-event-primary" clip-path="url(#clip-icon-event-primary)">
+    <g id="Mask_Group_39" data-name="Mask Group 39" transform="translate(-1195 -131)" clip-path="url(#clip-path)">
+      <g id="Group_180" data-name="Group 180">
+        <rect id="Rectangle_167" data-name="Rectangle 167" width="32" height="29" rx="4" transform="translate(1199 137)" fill="#ffd167"/>
+        <rect id="Rectangle_168" data-name="Rectangle 168" width="7" height="4" transform="translate(1202 146)" fill="#fff" opacity="0.5"/>
+        <rect id="Rectangle_169" data-name="Rectangle 169" width="7" height="4" transform="translate(1202 152)" fill="#fff"/>
+        <rect id="Rectangle_170" data-name="Rectangle 170" width="7" height="4" transform="translate(1202 158)" fill="#fff" opacity="0.55"/>
+        <rect id="Rectangle_171" data-name="Rectangle 171" width="8" height="4" transform="translate(1211 146)" fill="#fff"/>
+        <rect id="Rectangle_172" data-name="Rectangle 172" width="8" height="4" transform="translate(1211 152)" fill="#fff" opacity="0.5"/>
+        <rect id="Rectangle_173" data-name="Rectangle 173" width="8" height="4" transform="translate(1211 158)" fill="#fff"/>
+        <rect id="Rectangle_174" data-name="Rectangle 174" width="7" height="4" transform="translate(1221 146)" fill="#fff" opacity="0.55"/>
+        <rect id="Rectangle_175" data-name="Rectangle 175" width="7" height="4" transform="translate(1221 152)" fill="#fff"/>
+        <rect id="Rectangle_176" data-name="Rectangle 176" width="7" height="4" transform="translate(1221 158)" fill="#fff" opacity="0.5"/>
+        <path id="Rectangle_177" data-name="Rectangle 177" d="M4,0H28a4,4,0,0,1,4,4V6a0,0,0,0,1,0,0H0A0,0,0,0,1,0,6V4A4,4,0,0,1,4,0Z" transform="translate(1199 137)" fill="#ffaf34"/>
+        <line id="Line_49" data-name="Line 49" y2="4" transform="translate(1221 135.5)" fill="none" stroke="#ffd167" stroke-linecap="round" stroke-width="2"/>
+        <line id="Line_50" data-name="Line 50" y2="4" transform="translate(1208 135.5)" fill="none" stroke="#ffd167" stroke-linecap="round" stroke-width="2"/>
+        <g id="Group_179" data-name="Group 179" transform="translate(-92 241)">
+          <circle id="Ellipse_84" data-name="Ellipse 84" cx="9" cy="9" r="9" transform="translate(1309 -88)" fill="#ffaf34"/>
+          <path id="Path_24" data-name="Path 24" d="M1313.281-79l3,3,6.1-6.1" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
