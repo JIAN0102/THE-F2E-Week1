@@ -15,31 +15,118 @@
 
   <div id="app">
     <header
-      class="fixed top-0 left-0 flex justify-between items-center w-full h-24 bg-gray-400 shadow-header z-50 px-5">
-      <a href="index.html">
-        <picture>
-          <source srcset="img/logo/taiwan-desktop-logo.svg" media="(min-width: 768px)">
-          <img src="img/logo/taiwan-mobile-logo.svg" alt="logo" />
-        </picture>
-      </a>
-      <a href="javascript:;"
-        class="relative flex items-center bg-gray-300 rounded-md duration-300 px-7.5 py-4 | hover:bg-gray-500">
-        <div class="text-gray-100">
-          <svg width="16" height="16" viewBox="0 0 16 16" class="fill-current">
-            <g transform="translate(-1308 -35)">
-              <path
-                d="M108.7,397.552a4.079,4.079,0,0,0-1.45-.915,4.352,4.352,0,0,0-1.75-.337,3.759,3.759,0,0,0-1.75.433,4.446,4.446,0,0,0-1.45,1.107c-.1.144-.2.241-.3.385a2.68,2.68,0,0,0-.3-.385,5.428,5.428,0,0,0-1.45-1.107,4.456,4.456,0,0,0-1.75-.433,5.368,5.368,0,0,0-1.75.337,5.616,5.616,0,0,0-1.45.915,4.37,4.37,0,0,0-1.3,3.081,4.84,4.84,0,0,0,.35,1.685,5.37,5.37,0,0,0,.95,1.4c.4.385,6.15,5.393,6.7,5.585.55-.241,6.25-5.2,6.7-5.585a4.371,4.371,0,0,0,1.3-3.082,4.841,4.841,0,0,0-.35-1.685A4.669,4.669,0,0,0,108.7,397.552Z"
-                transform="translate(1214 -359.8)" />
-            </g>
-          </svg>
+        class="
+          fixed
+          top-0
+          left-0
+          flex
+          justify-between
+          items-center
+          w-full
+          h-24
+          bg-gray-400
+          shadow-header
+          z-40
+          px-5
+        "
+      >
+        <a href="index.html">
+          <picture>
+            <source
+              srcset="img/logo/taiwan-desktop-logo.svg"
+              media="(min-width: 768px)"
+            />
+            <img src="img/logo/taiwan-mobile-logo.svg" alt="logo" />
+          </picture>
+        </a>
+        <a
+          href="javascript:;"
+          class="
+            relative
+            flex
+            items-center
+            bg-gray-300
+            rounded-md
+            duration-300
+            px-7.5
+            py-4
+            |
+            hover:bg-gray-500
+          "
+          @click="openModal = !openModal"
+        >
+          <div class="text-gray-100">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              class="fill-current"
+            >
+              <g transform="translate(-1308 -35)">
+                <path
+                  d="M108.7,397.552a4.079,4.079,0,0,0-1.45-.915,4.352,4.352,0,0,0-1.75-.337,3.759,3.759,0,0,0-1.75.433,4.446,4.446,0,0,0-1.45,1.107c-.1.144-.2.241-.3.385a2.68,2.68,0,0,0-.3-.385,5.428,5.428,0,0,0-1.45-1.107,4.456,4.456,0,0,0-1.75-.433,5.368,5.368,0,0,0-1.75.337,5.616,5.616,0,0,0-1.45.915,4.37,4.37,0,0,0-1.3,3.081,4.84,4.84,0,0,0,.35,1.685,5.37,5.37,0,0,0,.95,1.4c.4.385,6.15,5.393,6.7,5.585.55-.241,6.25-5.2,6.7-5.585a4.371,4.371,0,0,0,1.3-3.082,4.841,4.841,0,0,0-.35-1.685A4.669,4.669,0,0,0,108.7,397.552Z"
+                  transform="translate(1214 -359.8)"
+                />
+              </g>
+            </svg>
+          </div>
+          <span class="text-sm text-white ml-2">我的最愛</span>
+          <span
+            class="
+              absolute
+              -top-1.5
+              -right-1.5
+              flex
+              justify-center
+              items-center
+              text-xs
+              bg-primary
+              w-4
+              h-4
+              rounded-full
+            "
+          >
+            {{ collectData.length }}
+          </span>
+        </a>
+        <div
+          class="
+            duration-300
+            fixed
+            top-24
+            right-5
+            z-50
+            w-100
+            p-4
+            bg-gray-300
+            shadow-header
+            rounded-md
+          "
+          :class="{'opacity-0 invisible':!openModal,'opacity-100 visible':openModal}"
+        >
+          <ul>
+            <li v-for="item in collectData">
+              <a
+                :href="getLink(item)"
+                class="
+                  duration-300
+                  flex
+                  items-start
+                  p-3
+                  rounded-md
+                  hover:bg-gray-400
+                "
+              >
+                <div class="w-15 bg-gray-100" v-if="item.Picture.PictureUrl1">
+                  <img :src="item.Picture.PictureUrl1" alt="" />
+                </div>
+                <div class="w-15 h-15 bg-gray-100" v-else></div>
+                <h2 class="flex-1 ml-4 text-sm text-white">{{ item.Name }}</h2>
+              </a>
+            </li>
+          </ul>
         </div>
-        <span class="text-sm text-white ml-2">我的最愛</span>
-        <span
-          class="absolute -top-1.5 -right-1.5 flex justify-center items-center text-xs bg-primary w-4 h-4 rounded-full">{{
-          collectData.length }}</span>
-      </a>
-
-    </header>
+      </header>
 
     <main class="mt-24">
 
@@ -337,6 +424,7 @@
           collectData: [],
           nowName: '',
           nowCity: '',
+          openModal: false,
           cities: [
             {
               name: '臺北市',
@@ -550,6 +638,9 @@
         },
         changeCityData() {
           this.getMoreCard();
+        },
+        getLink(item) {
+          return `detail.html?name=${item.Name}&nowCity=${this.nowCity}`;
         },
       },
       created() {

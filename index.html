@@ -73,6 +73,7 @@
             |
             hover:bg-gray-500
           "
+          @click="openModal = !openModal"
         >
           <div class="text-gray-100">
             <svg
@@ -108,6 +109,43 @@
             {{ collectData.length }}
           </span>
         </a>
+        <div
+          class="
+            duration-300
+            fixed
+            top-24
+            right-5
+            z-50
+            w-100
+            p-4
+            bg-gray-300
+            shadow-header
+            rounded-md
+          "
+          :class="{'opacity-0 invisible':!openModal,'opacity-100 visible':openModal}"
+        >
+          <ul>
+            <li v-for="item in collectData">
+              <a
+                :href="getLink(item)"
+                class="
+                  duration-300
+                  flex
+                  items-start
+                  p-3
+                  rounded-md
+                  hover:bg-gray-400
+                "
+              >
+                <div class="w-15 bg-gray-100" v-if="item.Picture.PictureUrl1">
+                  <img :src="item.Picture.PictureUrl1" alt="" />
+                </div>
+                <div class="w-15 h-15 bg-gray-100" v-else></div>
+                <h2 class="flex-1 ml-4 text-sm text-white">{{ item.Name }}</h2>
+              </a>
+            </li>
+          </ul>
+        </div>
       </header>
 
       <main class="mt-24">
@@ -649,7 +687,7 @@
               </ul>
             </div>
           </a>
-        </div> 
+        </div>
       </li>`,
         props: {
           item: {
@@ -705,6 +743,7 @@
             nowPage: 1,
             keyword: "",
             nowCity: "Taichung",
+            openModal: false,
             cities: [
               {
                 name: "臺北市",
@@ -799,12 +838,15 @@
         },
         computed: {
           searchData() {
-            return this.currentData.filter((item) => {
-              if (item.Description) {
-                return item.Description.indexOf(this.keyword) !== -1;
-              }
-              return item.Name.indexOf(this.keyword) !== -1;
-            });
+            if (this.keyword) {
+              return this.data.filter((item) => {
+                return item.Name.indexOf(this.keyword) !== -1;
+              });
+            } else {
+              return this.currentData.filter((item) => {
+                return item.Name.indexOf(this.keyword) !== -1;
+              });
+            }
           },
           totalPage() {
             return Math.ceil(this.data.length / this.perPage);
@@ -886,7 +928,7 @@
             let url = `https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/${
               this.nowCity
             }?$top=${this.perPage}&$skip=${
-              (this.perPage - 1) * this.nowPage
+              (this.nowPage - 1) * this.perPage
             }&$format=JSON`;
             axios
               .get(url, {
@@ -904,9 +946,11 @@
               });
           },
           selectPage() {
+            this.keyword = "";
             this.getCurrentData();
           },
           changePage(direction) {
+            this.keyword = "";
             this.nowPage += direction;
             this.getCurrentData();
           },
@@ -925,8 +969,12 @@
             );
           },
           changeCityData() {
+            this.keyword = "";
             this.nowPage = 1;
             this.getData();
+          },
+          getLink(item) {
+            return `detail.html?name=${item.Name}&nowCity=${this.nowCity}`;
           },
         },
         created() {
